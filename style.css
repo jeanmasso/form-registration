@@ -12,22 +12,41 @@
     margin-top: 7%;
 }
 
-.form_head {
-    background-color: #7B3BCE;
-    padding: 10px 0 10px 0;
+.ribbon {
+    left: -24px;
+    top: 20px;
+    font-size: 16px !important;
+    width: 97%;
+    position: relative;
+    background: #7B3BCE;
+    color: #fff;
     text-align: center;
-    height: 10%;
-    color: white;
+    padding: 1em 2em;
+    margin: 2em auto 3em;
 }
 
-.form_head h2 {
+.ribbon h2, p {
     margin: 0;
-    font-weight: bold;
-    text-transform: uppercase
 }
 
-.form_head p {
-    margin: 0;
+.ribbon .ribbon-content:before,
+.ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #7B3BCE transparent transparent transparent;
+    bottom: -1em;
+}
+
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
 }
 
 .container_form form {
@@ -75,41 +94,3 @@
     color: white;
     text-transform: uppercase;
 }
-
-.ribbon {
-    left: -24px;
-    top: 20px;
-    font-size: 16px !important;
-    width: 97%;
-    position: relative;
-    background: #7B3BCE;
-    color: #fff;
-    text-align: center;
-    padding: 1em 2em;
-    margin: 2em auto 3em;
-}
-
-.ribbon h2, p {
-    margin: 0;
-}
-
-.ribbon .ribbon-content:before,
-.ribbon .ribbon-content:after {
-    content: "";
-    position: absolute;
-    display: block;
-    border-style: solid;
-    border-color: #7B3BCE transparent transparent transparent;
-    bottom: -1em;
-}
-
-.ribbon .ribbon-content:before {
-    left: 0;
-    border-width: 1em 0 0 1em;
-}
-
-.ribbon .ribbon-content:after {
-    right: 0;
-    border-width: 1em 1em 0 0;
-}
-
