@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Form Registration</title>
+</head>
+
+<body>
+
+  <!-- Code Here -->
+  <form action="/register" method="POST" id="myform">
+    <fieldset>
+      <legend>Create your account</legend>
+    <label for="name">Your name :</label>
+    <input type="text" name="name" id="name" placeholder="your name" required>
+    <label for="email">Your email :</label>
+    <input type="email" name="email" id="email" placeholder="your email" required>
+    <label for="phone">Your phone :</label>
+    <input type="text" name="phone" id="phone" placeholder="your phone" size="6" minlength="6" maxlength="6">
+    <label for="password">Your password :</label>
+    <input type="password" name="password" id="password" required>
+    <label for="password">Confirm your password :</label>
+    <input type="password" name="confirm_password" id="confirm_password" required>
+    <span id="message"></span>
+    <input type="submit" id="button" value="Sign In" disabled>
+  </fieldset>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $('#password, #confirm_password').on('keyup', function () {
+      if ($('#password').val() == $('#confirm_password').val()) {
+        $('#message').html('Matching').css('color', 'green');
+        $('#button').prop('disabled', false);
+      } else {
+        $('#message').html('Not Matching').css('color', 'red');
+        $('#button').prop('disabled', true);
+      }
+    });
+  </script>
+  
+</body>
+
+</html>
